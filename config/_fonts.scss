@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+
+$body-font: "Work Sans", "Helvetica", "sans-serif";
+$headers-font: "Nunito", "Helvetica", "sans-serif";
+
+// .woff
+// @font-face {
+//   font-family: "Font Name";
+//   src: font-url('FontFile.eot');
+//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+//        font-url('FontFile.woff') format('woff'),
+//        font-url('FontFile.ttf') format('truetype')
+// }
+// $my-font: "Font Name";
+
+// .otf
+// @font-face {
+//   font-family: 'Font Name';
+//   src: font-url('font_name_thin_100') format('opentype');
+//   font-weight: 100;
+//   font-style: normal;
+// }
