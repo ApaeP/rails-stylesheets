@@ -1,13 +1,13 @@
 $aspect-ratios: (
-  1/1,
-  3/2
+  (1, 1),
+  (3, 2)
 );
 
 @each $ratio in $aspect-ratios {
-  $width: numerator($ratio);
-  $height: denominator($ratio);
+  $width: nth($ratio, 1);
+  $height: nth($ratio, 2);
 
   .aspect-ratio-#{$width}-#{$height} {
-    aspect-ratio: $ratio !important;
+    aspect-ratio: $width / $height;
   }
 }
