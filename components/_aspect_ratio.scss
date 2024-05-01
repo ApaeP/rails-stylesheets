@@ -1,26 +1,18 @@
-@function str-split($string, $delimiter) {
-  $index: str-index($string, $delimiter);
-  $first: str-slice($string, 1, $index - 1);
-  $last: str-slice($string, $index + 1);
-  @return ($first, $last);
-}
-
 @mixin generate-aspect-ratio-classes($ratios) {
   @each $ratio in $ratios {
-    $parts: str-split($ratio, '/');
-    $numerator: nth($parts, 1);
-    $denominator: nth($parts, 2);
+    $numerator: nth($ratio, 1);
+    $denominator: nth($ratio, 2);
 
     .aspect-ratio-#{$numerator}-#{$denominator} {
-      aspect-ratio: $numerator / $denominator;
+      aspect-ratio: #{$numerator} / #{$denominator};
     }
   }
 }
 
 $ratios: (
-  '3/2',
-  '2/3',
-  '1/1'
+  (3, 2),
+  (2, 3),
+  (1, 1)
 );
 
 @include generate-aspect-ratio-classes($ratios);
